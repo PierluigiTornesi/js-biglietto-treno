@@ -29,7 +29,7 @@ if(numKm >= 0){
         //debug costoBiglietto
         console.log(costoBiglietto, typeof costoBiglietto, "prezzo del biglietto dopo aver applicato lo sconto");
 
-        //modifico il messaggio da inviare alla fine
+        //modifico il messaggio e invio il costo del biglietto con lo sconto over 65
         message = `
             <h2>Ciao passeggero </h2> 
             <p> Questo é il costo del tuo biglietto , ${costoBiglietto.toFixed(2)} euro. </p>
@@ -46,7 +46,7 @@ if(numKm >= 0){
         //debug costoBiglietto
         console.log(costoBiglietto, typeof costoBiglietto, "prezzo del biglietto dopo aver applicato lo sconto");
 
-        //modifico il messaggio da inviare alla fine
+        //modifico il messaggio e invio il costo del biglietto con lo sconto per i minorenni
         message = `
             <h2>Ciao passeggero </h2> 
             <p> Questo é il costo del tuo biglietto , ${costoBiglietto.toFixed(2)} euro. </p>
@@ -59,6 +59,7 @@ if(numKm >= 0){
         `
         costoBiglietto = 0;
     }else{
+        //non applico nessuno sconto e invio il messaggio con il costo
         message = `
         <h2> Ciao passeggero </h2>
         <p>Il prezzo del suo biglietto é di ${costoBiglietto} euro , a cui non é stato applicato nessuno sconto avendo lei ${etaPass} anni. </p>
@@ -66,6 +67,7 @@ if(numKm >= 0){
         `
     }
 }else{
+    //invio un messaggio di errore essendo sbagliati i km
     message = `
     <h2> Ciao passeggero </h2>
     <p>Il numero di km da lei inserito non risulta conforme, probabilmente ha sbagliato a digitare, la preghiamo di ricaricare la pagina e di inserire nuovamente i dati, grazie. </p>
