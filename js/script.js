@@ -1,9 +1,9 @@
 //Chiedo il numero dei km
-const numKm = prompt("Dimmi quanti chilometri (km) vuoi percorrere");
+const numKm = parseInt(prompt("Dimmi quanti chilometri (km) vuoi percorrere"));
 //debug km
 console.log(numKm, typeof numKm, "numero dei km")
 //Chiedo l'etá del passeggero
-const etaPass = prompt("Dimmi la tua etá");
+const etaPass = parseInt(prompt("Dimmi la tua etá"));
 //debug etá
 console.log(etaPass, typeof etaPass, "etá del passeggero");
 //creo una variabile per restituire il messaggio finale
